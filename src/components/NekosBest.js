@@ -48,12 +48,11 @@ const NekosBest = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      {/* <h1 className="text-3xl font-bold text-center mb-8">Nekoss</h1> */}
+    <div className="w-full p-4">
 
-      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div className="flex flex-wrap -mx-3 mb-4">
-          <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded p-4 mb-4">
+        <div className="flex flex-wrap -mx-2 mb-4">
+          <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
             <label htmlFor="category" className="block text-gray-700 text-sm font-bold mb-2">
               Category:
             </label>
@@ -71,7 +70,7 @@ const NekosBest = () => {
             </select>
           </div>
 
-          <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+          <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
             <span className="block text-gray-700 text-sm font-bold mb-2">Type:</span>
             <div className="mt-2">
               <label className="inline-flex items-center mr-4">
@@ -100,8 +99,8 @@ const NekosBest = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap -mx-3 mb-4">
-          <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+        <div className="flex flex-wrap -mx-2 mb-4">
+          <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
             <label htmlFor="amount" className="block text-gray-700 text-sm font-bold mb-2">
               Amount (1-20):
             </label>
@@ -116,7 +115,7 @@ const NekosBest = () => {
             />
           </div>
 
-          <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+          <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
             <label htmlFor="query" className="block text-gray-700 text-sm font-bold mb-2">
               Search Query (optional):
             </label>
