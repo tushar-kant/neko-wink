@@ -68,6 +68,7 @@ const NekosBest = () => {
                 </option>
               ))}
             </select>
+            <p className="text-xs text-gray-500 mt-1">Try different categories for better results.</p>
           </div>
 
           <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
@@ -127,6 +128,7 @@ const NekosBest = () => {
               placeholder="Anime name, artist, or keyword"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
+            <p className="text-xs text-gray-500 mt-1">With the search query, you may or may not get any result.</p>
           </div>
         </div>
 
