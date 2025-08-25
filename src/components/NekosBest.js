@@ -49,82 +49,86 @@ const NekosBest = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-8">Nekos.best API Explorer</h1>
+      {/* <h1 className="text-3xl font-bold text-center mb-8">Nekoss</h1> */}
 
       <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div className="mb-4">
-          <label htmlFor="category" className="block text-gray-700 text-sm font-bold mb-2">
-            Category:
-          </label>
-          <select
-            id="category"
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-            style={{ border: '1px solid black', display: 'block', width: '200px', height: '30px', backgroundColor: 'white', color: 'black' }}
-          >
-            {categories.map((cat) => (
-              <option key={cat} value={cat}>
-                {cat}
-              </option>
-            ))}
-          </select>
-        </div>
+        <div className="flex flex-wrap -mx-3 mb-4">
+          <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+            <label htmlFor="category" className="block text-gray-700 text-sm font-bold mb-2">
+              Category:
+            </label>
+            <select
+              id="category"
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            >
+              {categories.map((cat) => (
+                <option key={cat} value={cat}>
+                  {cat}
+                </option>
+              ))}
+            </select>
+          </div>
 
-        <div className="mb-4">
-          <span className="block text-gray-700 text-sm font-bold mb-2">Type:</span>
-          <div className="mt-2">
-            <label className="inline-flex items-center mr-4">
-              <input
-                type="radio"
-                className="form-radio"
-                name="type"
-                value="1"
-                checked={type === '1'}
-                onChange={(e) => setType(e.target.value)}
-              />
-              <span className="ml-2">Image</span>
-            </label>
-            <label className="inline-flex items-center">
-              <input
-                type="radio"
-                className="form-radio"
-                name="type"
-                value="2"
-                checked={type === '2'}
-                onChange={(e) => setType(e.target.value)}
-              />
-              <span className="ml-2">GIF</span>
-            </label>
+          <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+            <span className="block text-gray-700 text-sm font-bold mb-2">Type:</span>
+            <div className="mt-2">
+              <label className="inline-flex items-center mr-4">
+                <input
+                  type="radio"
+                  className="form-radio"
+                  name="type"
+                  value="1"
+                  checked={type === '1'}
+                  onChange={(e) => setType(e.target.value)}
+                />
+                <span className="ml-2">Image</span>
+              </label>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  className="form-radio"
+                  name="type"
+                  value="2"
+                  checked={type === '2'}
+                  onChange={(e) => setType(e.target.value)}
+                />
+                <span className="ml-2">GIF</span>
+              </label>
+            </div>
           </div>
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="amount" className="block text-gray-700 text-sm font-bold mb-2">
-            Amount (1-20):
-          </label>
-          <input
-            type="number"
-            id="amount"
-            min="1"
-            max="20"
-            value={amount}
-            onChange={(e) => setAmount(Math.max(1, Math.min(20, Number(e.target.value))))}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
-        </div>
+        <div className="flex flex-wrap -mx-3 mb-4">
+          <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+            <label htmlFor="amount" className="block text-gray-700 text-sm font-bold mb-2">
+              Amount (1-20):
+            </label>
+            <input
+              type="number"
+              id="amount"
+              min="1"
+              max="20"
+              value={amount}
+              onChange={(e) => setAmount(Math.max(1, Math.min(20, Number(e.target.value))))}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
 
-        <div className="mb-6">
-          <label htmlFor="query" className="block text-gray-700 text-sm font-bold mb-2">
-            Search Query (optional):
-          </label>
-          <input
-            type="text"
-            id="query"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Anime name, artist, or keyword"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
+          <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+            <label htmlFor="query" className="block text-gray-700 text-sm font-bold mb-2">
+              Search Query (optional):
+            </label>
+            <input
+              type="text"
+              id="query"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Anime name, artist, or keyword"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
         </div>
 
         <div className="flex items-center justify-between">
