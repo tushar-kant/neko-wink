@@ -152,6 +152,13 @@ const NekosBest = () => {
             ) : (
               <p className="text-sm text-gray-600">Anime: {item.anime_name}</p>
             )}
+            <a
+              href={item.url}
+              download={`${selectedCategory}_${item.url.split('/').pop()}`}
+              className="mt-2 inline-block bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-center w-full"
+            >
+              Download
+            </a>
           </div>
         ))}
       </div>
